@@ -4,16 +4,13 @@
 }
 
 body{
-    font-family:"Noto Serif CJK TC";
+    font-family: Arial;
     background: LightBlue;
 }
 
 .container {
-    border: 1px solid MidnightBlue;
-
     width: 90%;
-    margin: auto;
-    display: flex;
+    margin: 40px auto
 }
 
 .groceries{
@@ -21,21 +18,23 @@ body{
     min-height: 100vh;
     margin: auto;
     background: AliceBlue;
-    box-shadow: 10px 10px 24px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 24px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: scroll;
+    padding: 20px;
 }
 
 .groceries h1{
     font-size: 2.5rem;
+
     margin-top: 1em;
 
 }
 
-.groceries i{
-    font-size: 2rem;
-    color: MidnightBlue;
-}
-
-.groceries i{
+.groceries span{
     font-size: 2rem;
     color: MidnightBlue;
 }
@@ -45,14 +44,83 @@ body{
     outline: 0;
     border: 0;
     border-bottom: 3px solid MidnightBlue;
-    width: 70%;
+    background: transparent;
+    padding: 10px;
+    width: 60%;
     font-size: 1.5rem;
 }
+#addBtn {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    margin-left: 20px;
+}
 
-#allItems h2{
+#allItems li, #favouritesItems li{
     margin-left: 50px;
     margin-right: 10px;
     margin-top: 15px;
     font-size: 2rem;
 }
 
+#allItems {
+    overflow: scroll;
+}
+
+.clear {
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    color: midnightblue;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.line {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.deleteBtn {
+    margin-left: 10px;
+    height: 100%;
+    padding: 7px;
+    cursor: pointer;
+    font-size: 20px;
+    border: 1px solid #333;
+    outline: none;
+    background-color: transparent;
+}
+
+.favourites {
+    background-color: transparent;
+    width: 30px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    height: 30px;
+    background-image: url('./star.svg');
+    background-size: contain;
+    overflow: scroll;
+    position: relative;
+}
+
+.isFavourite {
+    background-image: url('./starFav.svg');
+}

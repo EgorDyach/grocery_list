@@ -5,19 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Мои продукты</title>
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container">
         <div class="groceries">
-            <h1 style="text-align: center;">Список покупок</h1>
+            <h1>Список покупок</h1>
             <br>
-            <div style="text-align: center;">
-                <i id="basket" class="fa fa-shopping-basket" aria-hidden="true"></i>
-                <input id="userInput" type="text">
+            <div class="inputDiv">
+                <button id="basket" class="clear" aria-hidden="true">Очистить список</button>
+                <div class="form">
+                    <input id="userInput" type="text" placeholder="Введите название продукта" >
+                    <button id="addBtn" >Добавить</button>
+                </div>
             </div>
             <br>
-            <div id="allItems"></div>
+            <h2>Избранное</h2>
+            <ol id="favouritesItems"></ol>
+            <br>
+            <h2>Весь список</h2>
+            <ol id="allItems"></ol>
         </div>
     </div>
     <script src="main.js"></script>
